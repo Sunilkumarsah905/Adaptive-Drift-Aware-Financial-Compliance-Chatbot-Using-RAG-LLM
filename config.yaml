@@ -1,0 +1,25 @@
+app:
+  title: "Adaptive Drift-Aware Financial Compliance Chatbot"
+  host: "127.0.0.1"
+  port: 7860
+
+embedding:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  dimension: 384
+
+retrieval:
+  top_k: 4
+  min_confidence: 0.45
+
+chunking:
+  chunk_size: 900
+  chunk_overlap: 180
+
+storage:
+  index_path: "storage/faiss.index"
+  metadata_path: "storage/metadata.json"
+  drift_log_path: "storage/drift_log.json"
+
+llm:
+  use_openai: false
+  openai_model: "gpt-4o-mini"
